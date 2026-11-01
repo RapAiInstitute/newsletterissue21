@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>النشرة الرقمية - العدد الواحد والعشرون - أكتوبر 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0a1628;
+    --bg-secondary: #0f1e38;
+    --bg-card: #111f3a;
+    --gold: #d4a855;
+    --gold-light: #f0d890;
+    --gold-dim: rgba(212,168,85,0.12);
+    --text-primary: #e8e8e8;
+    --text-muted: #a0aec0;
+    --text-dim: #6a7d98;
+    --border: rgba(212,168,85,0.18);
+    --border-subtle: rgba(255,255,255,0.06);
+    --red: #e53e3e;
+    --red-bg: rgba(229,62,62,0.12);
+    --purple: #805ad5;
+    --purple-bg: rgba(128,90,213,0.12);
+    --section-ai: rgba(100,160,255,0.06);
+    --section-cyber: rgba(229,62,62,0.06);
+    --section-region: rgba(72,187,120,0.06);
+    --section-product: rgba(237,137,54,0.06);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Tajawal', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.75;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #0d1f3c 0%, #0a1628 60%, #071220 100%);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 40px 30px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .logo-img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 10px rgba(212,168,85,0.25));
+  }
+
+  .institute-info { text-align: right; }
+
+  .institute-name {
+    font-size: 13px;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .academy-name {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .newsletter-title {
+    font-size: clamp(28px,6vw,44px);
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 20px rgba(212,168,85,0.2);
+  }
+
+  .newsletter-title span { color: var(--gold); }
+
+  .newsletter-subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 18px;
+  }
+
+  .header-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+  }
+
+  .meta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: var(--gold-dim);
+    border: 1px solid var(--border);
+    color: var(--gold-light);
+  }
+
+  /* BREAKING BANNER */
+  .breaking-banner {
+    background: linear-gradient(90deg, rgba(26,54,93,0.6) 0%, rgba(15,30,56,0.8) 50%, rgba(26,54,93,0.6) 100%);
+    border: 1px solid rgba(212,168,85,0.4);
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: var(--text-primary);
+  }
+
+  .breaking-banner.red {
+    background: linear-gradient(90deg, rgba(180,40,40,0.15) 0%, rgba(26,54,93,0.6) 50%, rgba(180,40,40,0.15) 100%);
+    border-color: rgba(220,80,80,0.5);
+    color: #fed7d7;
+  }
+
+  .breaking-banner.gold {
+    background: linear-gradient(90deg, rgba(212,168,85,0.15) 0%, rgba(26,54,93,0.6) 50%, rgba(212,168,85,0.15) 100%);
+    border-color: rgba(212,168,85,0.5);
+    color: var(--gold-light);
+  }
+
+  .breaking-banner.purple {
+    background: linear-gradient(90deg, rgba(100,30,160,0.15) 0%, rgba(26,54,93,0.6) 50%, rgba(100,30,160,0.15) 100%);
+    border-color: rgba(180,80,220,0.5);
+    color: #e9d8fd;
+  }
+
+  .breaking-tag {
+    background: var(--gold);
+    color: var(--bg-primary);
+    font-weight: 800;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .breaking-text { flex: 1; }
+
+  /* TOC */
+  .toc {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin: 28px 0;
+  }
+
+  .toc-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--gold);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+  }
+
+  .toc-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border-subtle);
+    transition: background 0.2s;
+  }
+
+  .toc-icon { font-size: 18px; }
+  .toc-text { font-size: 13px; font-weight: 600; color: var(--text-muted); }
+  .toc-count {
+    margin-right: auto;
+    font-size: 11px;
+    background: var(--gold-dim);
+    color: var(--gold);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 700;
+  }
+
+  /* SECTION */
+  .section {
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 24px;
+    border: 1px solid var(--border-subtle);
+  }
+
+  .section-ai { background: var(--section-ai); }
+  .section-cyber { background: var(--section-cyber); }
+  .section-region { background: var(--section-region); }
+  .section-product { background: var(--section-product); }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .section-icon {
+    font-size: 26px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+  }
+
+  .section-subtitle {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  /* NEWS CARD */
+  .news-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+    transition: border-color 0.2s;
+  }
+
+  .news-card:last-child { margin-bottom: 0; }
+
+  .news-card-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .news-number {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--gold);
+    background: var(--gold-dim);
+    border: 1px solid var(--border);
+    padding: 3px 9px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .news-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .news-body {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-bottom: 12px;
+    padding-right: 32px;
+  }
+
+  .news-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    padding-right: 32px;
+  }
+
+  .news-tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.06);
+    color: var(--text-muted);
+  }
+
+  .news-date {
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-right: auto;
+  }
+
+  .news-source {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gold);
+    text-decoration: none;
+    padding: 3px 10px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: var(--gold-dim);
+  }
+
+  .news-source:hover { opacity: 0.8; }
+
+  /* CVE BADGE */
+  .cve-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 5px;
+    margin-left: 6px;
+  }
+
+  .cve-critical { background: rgba(229,62,62,0.2); color: #fc8181; border: 1px solid rgba(229,62,62,0.3); }
+  .cve-high { background: rgba(237,137,54,0.2); color: #f6ad55; border: 1px solid rgba(237,137,54,0.3); }
+  .cve-medium { background: rgba(236,201,75,0.2); color: #f6e05e; border: 1px solid rgba(236,201,75,0.3); }
+
+  /* SURVEY */
+  .survey-block {
+    background: linear-gradient(135deg, #0d1f3c 0%, #0a1628 100%);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin: 28px 0;
+    text-align: center;
+  }
+
+  .survey-block h3 {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--gold-light);
+    margin-bottom: 10px;
+  }
+
+  .survey-block p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 18px;
+  }
+
+  .survey-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold);
+    color: #0a1628;
+    font-weight: 800;
+    font-size: 14px;
+    padding: 11px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Tajawal', sans-serif;
+  }
+
+  .survey-btn:hover { opacity: 0.9; }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 36px 0 20px;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .footer h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .footer p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+
+  .copyright {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .copyright p {
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-bottom: 4px;
+  }
+
+  @media (max-width: 600px) {
+    .header { padding: 28px 18px; }
+    .section { padding: 18px; }
+    .news-body, .news-footer { padding-right: 0; }
+    .toc-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="logo-section">
+    <img src="rap_logo.png" alt="شعار الأكاديمية الملكية للشرطة" class="logo-img">
+    <div class="institute-info">
+      <div class="institute-name">معهد نظم المعلومات الأمنية وتطبيقات الذكاء الاصطناعي</div>
+      <div class="academy-name">الأكاديمية الملكية للشرطة - مملكة البحرين</div>
+    </div>
+  </div>
+  <div class="newsletter-title">النشرة <span>الرقمية</span></div>
+  <div class="newsletter-subtitle">مواكبة التحولات التقنية العالمية والإقليمية</div>
+  <div class="header-meta">
+    <span class="meta-badge">📅 16 - 31 أكتوبر 2026</span>
+    <span class="meta-badge">📋 العدد الواحد والعشرون</span>
+    <span class="meta-badge">🤖 ذكاء اصطناعي | 🔒 أمن سيبراني | 📡 تقنية</span>
+  </div>
+</div>
+
+<!-- BREAKING BANNER -->
+<div class="breaking-banner red">
+  <div class="breaking-tag" style="background:#c0392b;">🚨 تنبيه أمني</div>
+  <div class="breaking-text">حملة VAPOR PANDA وStorm-0940: مجموعتا تهديد مرتبطتان بالصين استهدفتا أكثر من 200 مؤسسة في 11 يومًا، واخترقت Storm-0940 ما يزيد على 2,250 مستأجرًا في Microsoft 365 باستخدام بيانات ConnectWise المسروقة — تحقق من مخرجات الدخول فورًا.</div>
+</div>
+
+<div class="container">
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">📋 محتويات هذا العدد</div>
+    <div class="toc-grid">
+      <div class="toc-item">
+        <span class="toc-icon">🤖</span>
+        <span class="toc-text">الذكاء الاصطناعي</span>
+        <span class="toc-count">5</span>
+      </div>
+      <div class="toc-item">
+        <span class="toc-icon">🔐</span>
+        <span class="toc-text">الأمن السيبراني</span>
+        <span class="toc-count">5</span>
+      </div>
+      <div class="toc-item">
+        <span class="toc-icon">🌍</span>
+        <span class="toc-text">المنطقة</span>
+        <span class="toc-count">4</span>
+      </div>
+      <div class="toc-item">
+        <span class="toc-icon">🛠️</span>
+        <span class="toc-text">منتجات وأدوات</span>
+        <span class="toc-count">4</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════ AI SECTION ═══════════════════════════════ -->
+  <div class="section section-ai">
+    <div class="section-header">
+      <div class="section-icon">🤖</div>
+      <div>
+        <div class="section-title">الذكاء الاصطناعي</div>
+        <div class="section-subtitle">أبرز التطورات والإصدارات في عالم الذكاء الاصطناعي</div>
+      </div>
+    </div>
+
+    <!-- AI 1 -->
+    <div class="news-card">
+      <div class="news-card-top">
+        <span class="news-number">01</span>
+        <span class="news-title">Anthropic تُطلق Claude Duet — وكيل ذكاء اصطناعي استباقي متكامل</span>
+      </div>
+      <div class="news-body">
+        أعلنت Anthropic في 21 أكتوبر 2026 عن Claude Duet، وكيل ذكاء اصطناعي يعمل في خلفية التطبيقات لمراقبة البريد الإلكتروني والتقويم والتنبيهات، ويُعدّ ملخصات الصباح وقوائم المهام اليومية تلقائيًا. يعمل Duet داخل آلات افتراضية سحابية مزودة بمتصفح، مما يمنحه قدرات التصفح والملء ومعالجة المستندات. والجدير بالذكر أن الوكيل لا يُرسل رسائل، ولا يُجري مدفوعات، ولا يوقع على وثائق، ولا يحذف أي شيء دون موافقة صريحة من المستخدم. يتوفر حاليًا ضمن قائمة انتظار حصرية لمشتركي Pro وMax في الولايات المتحدة عبر iOS وAndroid والويب.
+      </div>
+      <div class="news-footer">
+        <span class="news-tag">وكيل استباقي</span>
+        <span class="news-tag">Anthropic</span>
+        <span class="news-date">21 أكتوبر 2026</span>
+        <a class="news-source" href="https://letsdatascience.com/claude-duet-anthropic-proactive-agent/" target="_blank">المصدر ↗</a>
+      </div>
+    </div>
+
+    <!-- AI 2 -->
+    <div class="news-card">
+      <div class="news-card-top">
+        <span class="news-number">02</span>
+        <span class="news-title">OpenAI تُصدر GPT-6.1 Terra — الأسرع والأرخص لأعباء العمل الموكّلة</span>
+      </div>
+      <div class="news-body">
+        كشفت OpenAI في 26 أكتوبر 2026 عن GPT-6.1 Terra، بتسعير يبلغ دولارًا واحدًا لكل مليون رمز مُدخَل وخمسة دولارات لكل مليون رمز مُخرَج، مما يجعله أرخص بنسبة 50% من الجيل السابق Sol. يتميز Terra بسرعة معالجة تفوق سابقيه ثلاثة أضعاف في سيناريوهات متعددة الوكلاء، مع دعم مُحسَّن لاستخدام الحاسوب والتعاون بين التطبيقات. يتوفر النموذج عبر واجهة برمجة التطبيقات وضمن ChatGPT Work وChatGPT Codex.
+      </div>
+      <div class="news-footer">
+        <span class="news-tag">نماذج لغوية</span>
+        <span class="news-tag">OpenAI</span>
+        <span class="news-date">26 أكتوبر 2026</span>
+        <a class="news-source" href="https://aiweekly.co/p/openai-releases-gpt-61-terra" target="_blank">المصدر ↗</a>
+      </div>
+    </div>
+
+    <!-- AI 3 -->
+    <div class="news-card">
+      <div class="news-card-top">
+        <span class="news-number">03</span>
+        <span class="news-title">Mistral Large 4 بأوزان مفتوحة — تريليون معامل متاح للجميع</span>
+      </div>
+      <div class="news-body">
+        أطلقت Mistral AI في 29 أكتوبر 2026 نموذج Mistral Large 4 بشكل مفتوح يضم تريليون معامل تحت رخصة MIT معدّلة. تُتيح الرخصة الاستخدام التجاري الحر، غير أن تقديم النموذج كخدمة للغير يستلزم الحصول على ترخيص منفصل. يستهدف النموذج تطوير البرمجيات والأمن السيبراني الدفاعي بشكل أساسي. تبقى القيود التصديرية وفق اللوائح الأمريكية سارية على تصدير الأوزان.
+      </div>
+      <div class="news-footer">
+        <span class="news-tag">مصدر مفتوح</span>
+        <span class="news-tag">Mistral AI</span>
+        <span class="news-date">29 أكتوبر 2026</span>
+        <a class="news-source" href="https://thenewstack.io/mistral-large-4-open-weights-cybersecurity/" target="_blank">المصدر ↗</a>
+      </div>
+    </div>
+
+    <!-- AI 4 -->
+    <div class="news-card">
+      <div class="news-card-top">
+        <span class="news-number">04</span>
+        <span class="news-title">Google وMicrosoft وAnthropic تدعم معيارًا جديدًا لإيقاف تدريب الذكاء الاصطناعي على البيانات</span>
+      </div>
+      <div class="news-body">
+        أعلن في 30 أكتوبر 2026 عن مبادرة مشتركة تجمع Google وMicrosoft وAnthropic وOpenAI لدعم امتداد جديد لملف robots.txt يُمكِّن أصحاب المحتوى من استبعاد بياناتهم من تدريب نماذج الذكاء الاصطناعي. المقترح معروض حاليًا أمام هيئة IETF للمراجعة والاعتماد. أعربت Meta عن دعم مبدئي دون التزام رسمي. يُنتظر أن يدخل المعيار حيز التطبيق خلال الأشهر القادمة.
+      </div>
+      <div class="news-footer">
+        <span class="news-tag">حوكمة البيانات</span>
+        <span class="news-tag">معايير IETF</span>
+        <span class="news-date">30 أكتوبر 2026</span>
+        <a class="news-source" href="https://siliconangle.com/2026/10/30/ai-training-opt-out-standard-google-microsoft-anthropic/" target="_blank">المصدر ↗</a>
+      </div>
+    </div>
+
+    <!-- AI 5 -->
+    <div class="news-card">
+      <div class="news-card-top">
+        <span class="news-number">05</span>
+        <span class="news-title">Anthropic تتبرع بمعيار Agent Skills لمؤسسة Linux Foundation</span>
+      </div>
+      <div class="news-body">
+        أعلنت Anthropic في 22 أكتوبر 2026 عن التبرع بمعيار Agent Skills المفتوح لمؤسسة Linux Foundation عبر مبادرة Agentic AI Foundation. يُوحِّد هذا المعيار الطريقةَ التي تُعرِّف بها النماذج اللغوية الكبيرة قدراتها وتتشاركها مع الوكلاء الآخرين. تدعم المعيار بالفعل أكثر من 70 منصة برمجية وبيئة تطوير، مما يُرسّخ مكانته باعتباره الإطار الموحد للتعاون بين الوكلاء في البيئات متعددة النماذج.
+      </div>
+      <div class="news-footer">
+        <span class="news-tag">وكلاء ذكاء اصطناعي</span>
+        <span class="news-tag">معايير مفتوحة</span>
+        <span class="news-date">22 أكتوبر 2026</span>
+        <a class="news-source" href="https://hellogrowth.ai/anthropic-agent-skills-linux-foundation/" target="_blank">المصدر ↗</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════ CYBERSECURITY SECTION ═══════════════════════════ -->
+  <div class="section section-cyber">
+    <div class="section-header">
+      <div class="section-icon">🔐</div>
+      <div>
+        <div class="section-title">الأمن السيبراني</div>
+        <div class="section-subtitle">ثغرات وتهديدات وحوادث الأمن الرقمي</div>
+      </div>
+    </div>
+
+    <!-- Cyber 1 -->
+    <div class="news-card">
+      <div class="news-card-top">
+        <span class="news-number">01</span>
+        <span class="news-title">
+          ثغرة تنفيذ كود عن بُعد في GitLab بدون مصادقة
+          <span class="cve-badge cve-critical">CVE-2026-110264 | CVSS 10.0</span>
+        </span>
+      </div>
+      <div class="news-body">
+        كشفت GitLab في 21 أكتوبر 2026 عن ثغرة بالغة الخطورة تُصنَّف CVSS 10.0 في النسخ الذاتية الاستضافة (Self-Managed)، تُتيح لأي مهاجم غير موثق تنفيذ أوامر عشوائية على الخادم. الثغرة مصنّفة "حرجة" وتُعدّ من أشد ثغرات الفئة خطورةً. جرى إصلاحها في الإصدار 19.5.1. يُوصى بالترقية الفورية وتقييد الوصول الشبكي إلى واجهة الإدارة.
+      </div>
+      <div class="news-footer">
+        <span class="news-tag">RCE حرج</span>
+        <span class="news-tag">GitLab</span>
+        <span class="news-date">21 أكتوبر 2026</span>
+        <a class="news-source" href="https://explainx.ai/vulnerability-tracker/CVE-2026-110264" target="_blank">المصدر ↗</a>
+      </div>
+    </div>
+
+    <!-- Cyber 2 -->
+    <div class="news-card">
+      <div class="news-card-top">
+        <span class="news-number">02</span>
+        <span class="news-title">
+          ثغرة حجب الخدمة في Cisco ASA/FTD تُستغل بنشاط
+          <span class="cve-badge cve-high">CVE-2026-20349 | CVSS 8.6</span>
+        </span>
+      </div>
+      <div class="news-body">
+        أصدرت Cisco في 28 أكتوبر 2026 تحذيرًا عاجلًا بشأن ثغرة في بروتوكول SSL VPN تُصيب منتجي ASA وFTD. يستطيع مهاجم غير موثق إجبار الجهاز على إعادة التشغيل عبر إرسال طلب HTTP مُصمَّم بعناية، مما يُعطّل خدمات الشبكة. أكدت كلٌّ من Tenable وهيئة CCCS الكندية رصد استغلال نشط لهذه الثغرة. يجب تطبيق تحديثات Cisco الأمنية العاجلة وتعطيل SSL VPN مؤقتًا إن أمكن.
+      </div>
+      <div class="news-footer">
+        <span class="news-tag">حجب خدمة</span>
+        <span class="news-tag">Cisco</span>
+        <span class="news-date">28 أكتوبر 2026</span>
+        <a class="news-source" href="https://www.tenable.com/cve/CVE-2026-20349" target="_blank">المصدر ↗</a>
+      </div>
+    </div>
+
+    <!-- Cyber 3 -->
+    <div class="news-card">
+      <div class="news-card-top">
+        <span class="news-number">03</span>
+        <span class="news-title">إضافة Claude Code المُلوَّثة بالمتجر تُصيب آلاف المطورين</span>
+      </div>
+      <div class="news-body">
+        في 29 أكتوبر 2026 رُصد نشر إصدار مخترق (2.1.313) من إضافة Claude Code في متجر Cursor، ظلّت متاحة لنحو 11 ساعة قبل سحبها. يُقدَّر عدد المستخدمين المتضررين بما يصل إلى 5,000 مطور. أصدر فريق Cursor إصدارًا إصلاحيًا (2.1.314) فور اكتشاف الأمر. تُشكّل هذه الحادثة تحذيرًا بالغًا من مخاطر سلاسل التوريد البرمجية، وتُثبت ضرورة التحقق من سلامة الإضافات قبل تثبيتها.
+      </div>
+      <div class="news-footer">
+        <span class="news-tag">سلسلة التوريد</span>
+        <span class="news-tag">Cursor</span>
+        <span class="news-date">29 أكتوبر 2026</span>
+        <a class="news-source" href="https://explainx.ai/supply-chain/cursor-claude-code-malicious-extension" target="_blank">المصدر ↗</a>
+      </div>
+    </div>
+
+    <!-- Cyber 4 -->
+    <div class="news-card">
+      <div class="news-card-top">
+        <span class="news-number">04</span>
+        <span class="news-title">VAPOR PANDA وStorm-0940: حملة صينية تُخترق 2,250 مستأجرًا في Microsoft 365</span>
+      </div>
+      <div class="news-body">
+        رصدت فرق الاستخبارات الأمنية بين 17 و28 أكتوبر 2026 حملتَي تهديد متزامنتَين تنسّقان مع بعضهما. استهدفت VAPOR PANDA/ARTEX أكثر من 200 مؤسسة في 11 يومًا فحسب، فيما أقدمت Storm-0940 على اختراق أكثر من 2,250 مستأجرًا في Microsoft 365 عبر بيانات اعتماد ConnectWise المسرّبة. تُنسب المجموعتان إلى جهات مرتبطة بالصين، وتُصنَّف الحملة من أشد الهجمات تنسيقًا في أكتوبر 2026.
+      </div>
+      <div class="news-footer">
+        <span class="news-tag">APT — صيني</span>
+        <span class="news-tag">Microsoft 365</span>
+        <span class="news-date">17–28 أكتوبر 2026</span>
+        <a class="news-source" href="https://explainx.ai/threat-intel/vapor-panda-storm-0940-campaign" target="_blank">المصدر ↗</a>
+      </div>
+    </div>
+
+    <!-- Cyber 5 -->
+    <div class="news-card">
+      <div class="news-card-top">
+        <span class="news-number">05</span>
+        <span class="news-title">
+          CISA تُدرج ثغرتَي Adobe Commerce وBrotli في قائمة الثغرات المستغَلة
+          <span class="cve-badge cve-critical">CVSS 9.3</span>
+        </span>
+      </div>
+      <div class="news-body">
+        أضافت وكالة CISA الأمريكية في 27 أكتوبر 2026 إلى قائمة الثغرات المعروفة المستغَلة (KEV) كلًّا من: CVE-2026-48356 في Adobe Commerce (CVSS 9.3، حقن SQL مع تصعيد صلاحيات)، وCVE-2026-111497 في مكتبة Brotli لضغط البيانات. استغلال هاتين الثغرتين في الحوادث الفعلية يستوجب تطبيق التحديثات الأمنية فورًا من قِبَل جميع مشغّلي منصات التجارة الإلكترونية والأنظمة المعتمدة على Brotli.
+      </div>
+      <div class="news-footer">
+        <span class="news-tag">CISA KEV</span>
+        <span class="news-tag">Adobe Commerce</span>
+        <span class="news-date">27 أكتوبر 2026</span>
+        <a class="news-source" href="https://explainx.ai/cisa-kev/adobe-commerce-brotli-october-2026" target="_blank">المصدر ↗</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════ REGIONAL SECTION ═══════════════════════════ -->
+  <div class="section section-region">
+    <div class="section-header">
+      <div class="section-icon">🌍</div>
+      <div>
+        <div class="section-title">المنطقة</div>
+        <div class="section-subtitle">أبرز أخبار التقنية والأمن الرقمي في المنطقة</div>
+      </div>
+    </div>
+
+    <!-- Region 1 -->
+    <div class="news-card">
+      <div class="news-card-top">
+        <span class="news-number">01</span>
+        <span class="news-title">تأجيل منتدى مبادرة مستقبل الاستثمار إلى 2027 جراء التوترات في المنطقة</span>
+      </div>
+      <div class="news-body">
+        أعلن منتدى مبادرة مستقبل الاستثمار (FII) المعروف بـ"دافوس الصحراء" في الفترة 19-20 أكتوبر 2026 تأجيل نسخته السنوية إلى عام 2027، مستشهدًا بتصاعد الهجمات الحوثية على الأراضي السعودية دافعًا للقرار. طلبت الوكالات الرياضية المنظِّمة من موظفيها العمل عن بُعد احترازيًا. لم تُحدَّد بعدُ تواريخ بديلة لعام 2027. يُعدّ FII أبرز منتديات الاستثمار العالمي في المنطقة، ويجمع قادة الأعمال والتقنية من مختلف أنحاء العالم.
+      </div>
+      <div class="news-footer">
+        <span class="news-tag">اقتصاد إقليمي</span>
+        <span class="news-tag">المملكة العربية السعودية</span>
+        <span class="news-date">19 أكتوبر 2026</span>
+        <a class="news-source" href="https://www.aljazeera.com/economy/2026/10/fii-postponed-2027-houthi" target="_blank">المصدر ↗</a>
+      </div>
+    </div>
+
+    <!-- Region 2 -->
+    <div class="news-card">
+      <div class="news-card-top">
+        <span class="news-number">02</span>
+        <span class="news-title">استثمارات البنية التحتية الرقمية الخليجية تمضي قُدُمًا رغم التهديدات الإيرانية</span>
+      </div>
+      <div class="news-body">
+        في 26 أكتوبر 2026 أكد رئيس البرلمان الإيراني على منصة X تهديداته بشأن ما وصفه بـ"سلطة البيانات في الخليج الفارسي"، في حين أكد السفير الإماراتي في واشنطن أن استثمارات البنية التحتية الرقمية "ماضية للأمام". تُعزّز دول الخليج إجمالًا بنيتها التحتية للذكاء الاصطناعي ومراكز البيانات رغم التوترات الجيوسياسية، مع استمرار شركات التقنية الغربية في ضخ الاستثمارات في المنطقة. تُجسّد هذه المعادلة التوازن الدقيق بين الاعتبارات الأمنية وضرورات التحول الرقمي.
+      </div>
+      <div class="news-footer">
+        <span class="news-tag">بنية تحتية رقمية</span>
+        <span class="news-tag">الإمارات · الخليج</span>
+        <span class="news-date">26 أكتوبر 2026</span>
+        <a class="news-source" href="https://enterpriseam.com/gulf-ai-infrastructure-continues-october-2026" target="_blank">المصدر ↗</a>
+      </div>
+    </div>
+
+    <!-- Region 3 -->
+    <div class="news-card">
+      <div class="news-card-top">
+        <span class="news-number">03</span>
+        <span class="news-title">SANS Gulf Region 2026 ينطلق في دبي — الأضخم للأمن السيبراني في المنطقة</span>
+      </div>
+      <div class="news-body">
+        انطلق مؤتمر وتدريب SANS Gulf Region 2026 في 31 أكتوبر 2026 بمنتجع هيلتون جميرا بيتش في دبي، ويمتد حتى 26 نوفمبر 2026. يضم الحدث 14 دورة تدريبية متخصصة تشمل: أمن اللغويات الكبيرة والذكاء الاصطناعي (SEC545)، واختبار الذكاء الاصطناعي المعادي (SEC598)، وأمن البنية التحتية الصناعية (ICS515)، فضلًا عن بطولة NetWars. تُشير دراسة PwC 2026 إلى أن 53% من المستجيبين في المنطقة يفتقرون إلى مهارات الدفاع السيبراني المدعوم بالذكاء الاصطناعي.
+      </div>
+      <div class="news-footer">
+        <span class="news-tag">تدريب أمني</span>
+        <span class="news-tag">الإمارات — دبي</span>
+        <span class="news-date">31 أكتوبر 2026</span>
+        <a class="news-source" href="https://www.intelligentcio.com/me/?p=42349" target="_blank">المصدر ↗</a>
+      </div>
+    </div>
+
+    <!-- Region 4 -->
+    <div class="news-card">
+      <div class="news-card-top">
+        <span class="news-number">04</span>
+        <span class="news-title">تقرير مشهد التهديدات في دول الخليج 2026 — SOCRadar يرصد ثغرات حرجة في البنية التحتية</span>
+      </div>
+      <div class="news-body">
+        أصدرت شركة SOCRadar تقريرها السنوي عن مشهد التهديدات السيبرانية في دول مجلس التعاون الخليجي لعام 2026، ويكشف التقرير عن تصاعد حاد في استهداف القطاعات الحكومية والمالية والطاقة في المملكة العربية السعودية والإمارات والكويت والبحرين. يُسلّط التقرير الضوء على ارتفاع هجمات برامج الفدية بنسبة 40% مقارنة بالعام الماضي، مع استهداف متزايد للبنية التحتية الحيوية والأنظمة الصناعية. يوصي التقرير بتعزيز قدرات الكشف والاستجابة لدى الجهات الخليجية.
+      </div>
+      <div class="news-footer">
+        <span class="news-tag">استخبارات تهديدات</span>
+        <span class="news-tag">منطقة الخليج</span>
+        <span class="news-date">أكتوبر 2026</span>
+        <a class="news-source" href="https://socradar.io/resources/report/gulf-region-threat-landscape-report-2026/" target="_blank">المصدر ↗</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════ PRODUCTS SECTION ═══════════════════════════ -->
+  <div class="section section-product">
+    <div class="section-header">
+      <div class="section-icon">🛠️</div>
+      <div>
+        <div class="section-title">منتجات وأدوات</div>
+        <div class="section-subtitle">إصدارات وتحديثات الأدوات التقنية والأمنية</div>
+      </div>
+    </div>
+
+    <!-- Product 1 -->
+    <div class="news-card">
+      <div class="news-card-top">
+        <span class="news-number">01</span>
+        <span class="news-title">SolarWinds تُطلق Avior — وكيل ذكاء اصطناعي للبيئات التقنية الحرجة</span>
+      </div>
+      <div class="news-body">
+        أعلنت SolarWinds في أسبوع 16 أكتوبر 2026 عن إطلاق Avior، نظام وكيل ذكاء اصطناعي مُستقل يعمل فوق منصة SolarWinds لإدارة البيئات التقنية الحرجة. يُساعد Avior فرق تقنية المعلومات على تعريف الأهداف وتنسيق الوكلاء المتخصصين وتتبع التقدم نحو نتائج قابلة للقياس، مع مسارات تدقيق كاملة وآليات موافقة بشرية مدمجة. يستهدف المنتج البيئات التي لا يُقبَل فيها أي توقف خدمة.
+      </div>
+      <div class="news-footer">
+        <span class="news-tag">إدارة IT</span>
+        <span class="news-tag">SolarWinds</span>
+        <span class="news-date">أسبوع 16 أكتوبر 2026</span>
+        <a class="news-source" href="https://www.helpnetsecurity.com/2026/10/16/new-infosec-products-of-the-week-october-16-2026/" target="_blank">المصدر ↗</a>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="news-card">
+      <div class="news-card-top">
+        <span class="news-number">02</span>
+        <span class="news-title">Qualys تُصدر TruRisk Eliminate 2.0 — معالجة مخاطر الثغرات بشكل مؤتمت</span>
+      </div>
+      <div class="news-body">
+        كشفت Qualys عن الإصدار 2.0 من TruRisk Eliminate مع محرك TruConfidence الجديد لاستخبارات المعالجة والتنسيق. يُطبّق المنتج مفهوم "RemOps المؤتمت" الذي يجمع بين تقييم المخاطر وتنفيذ الإصلاحات بشكل آلي مع الحفاظ على استمرارية العمل. يُتيح للمؤسسات خفض وقت معالجة الثغرات بشكل جذري مع توثيق كامل للإجراءات لأغراض الامتثال.
+      </div>
+      <div class="news-footer">
+        <span class="news-tag">إدارة ثغرات</span>
+        <span class="news-tag">Qualys</span>
+        <span class="news-date">أسبوع 16 أكتوبر 2026</span>
+        <a class="news-source" href="https://www.helpnetsecurity.com/2026/10/16/new-infosec-products-of-the-week-october-16-2026/" target="_blank">المصدر ↗</a>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="news-card">
+      <div class="news-card-top">
+        <span class="news-number">03</span>
+        <span class="news-title">ThreatModeler يُطلق NexusAI — شريك ذكاء اصطناعي لنمذجة التهديدات</span>
+      </div>
+      <div class="news-body">
+        أعلنت ThreatModeler في أسبوع 23 أكتوبر 2026 عن NexusAI، وكيل ذكاء اصطناعي مدمج في منصة ThreatModeler Nexus. يُؤتمت NexusAI عملية إنشاء نماذج التهديد وتحليلها وصيانتها، ويتابع التغييرات المعمارية في أنظمة المؤسسة لاقتراح تحديثات أمنية تلقائية. يُختصر وقت نمذجة التهديدات لفِرق الأمن بنسبة تصل إلى 70% وفق بيانات الشركة.
+      </div>
+      <div class="news-footer">
+        <span class="news-tag">نمذجة التهديدات</span>
+        <span class="news-tag">ThreatModeler</span>
+        <span class="news-date">أسبوع 23 أكتوبر 2026</span>
+        <a class="news-source" href="https://www.helpnetsecurity.com/2026/10/23/new-infosec-products-of-the-week-october-23-2026/" target="_blank">المصدر ↗</a>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="news-card">
+      <div class="news-card-top">
+        <span class="news-number">04</span>
+        <span class="news-title">IDENTOS تُتيح PolicyArc بشكل عام — إدارة صلاحيات الوصول لوكلاء الذكاء الاصطناعي</span>
+      </div>
+      <div class="news-body">
+        أصبح PolicyArc من IDENTOS متاحًا للعموم في أسبوع 23 أكتوبر 2026. يُمكِّن المنتج الفرقَ من تعريف سياسات الوصول وتطبيقها ومراجعتها عبر جميع التطبيقات من وحدة تحكم مركزية واحدة. يتميز بدعمه المُخصَّص لوكلاء الذكاء الاصطناعي من خلال منح صلاحيات مؤقتة محدودة النطاق — مبدأ "أقل امتياز" لعصر الوكلاء — وهو ما يُعالج أحد أخطر مخاطر الأمن في بيئات الذكاء الاصطناعي متعددة الوكلاء.
+      </div>
+      <div class="news-footer">
+        <span class="news-tag">إدارة الهوية</span>
+        <span class="news-tag">IDENTOS</span>
+        <span class="news-date">أسبوع 23 أكتوبر 2026</span>
+        <a class="news-source" href="https://www.helpnetsecurity.com/2026/10/23/new-infosec-products-of-the-week-october-23-2026/" target="_blank">المصدر ↗</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- SURVEY -->
+  <div class="survey-block">
+    <h3>📊 شاركنا رأيك في النشرة الرقمية</h3>
+    <p>آراؤكم تُساعدنا على تطوير المحتوى وتحسين جودة النشرة لخدمتكم بشكل أفضل</p>
+    <a class="survey-btn" href="https://forms.gle/FVL5J3uzMVBT1HsA9" target="_blank">
+      ✍️ شارك في الاستطلاع
+    </a>
+  </div>
+
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <h3>📧 للتواصل والاقتراحات</h3>
+    <p><strong>الإعداد:</strong> معهد نظم المعلومات الأمنية وتطبيقات الذكاء الاصطناعي</p>
+    <p><strong>الإصدار القادم:</strong> النشرة الرقمية — العدد الثاني والعشرون | 1–15 نوفمبر 2026</p>
+    <div class="copyright">
+      <p>© 2026 الأكاديمية الملكية للشرطة - مملكة البحرين | جميع الحقوق محفوظة</p>
+      <p>النشرة الرقمية • العدد الواحد والعشرون • أكتوبر 2026</p>
+    </div>
+  </div>
+
+</div><!-- /container -->
+</body>
+</html>
